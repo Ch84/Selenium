@@ -1,2 +1,2 @@
-[0214/225821.005:ERROR:process_reader_win.cc(123)] NtOpenThread: {Åtkomst nekad} En process har begärt åtkomst till ett objekt, men har inte de rättigheter som krävs. (0xc0000022)
+[0214/225821.005:ERROR:process_reader_win.cc(123)] NtOpenThread: {ï¿½tkomst nekad} En process har begï¿½rt ï¿½tkomst till ett objekt, men har inte de rï¿½ttigheter som krï¿½vs. (0xc0000022)
 [0214/225821.119:ERROR:exception_snapshot_win.cc(88)] thread ID 16888 not found in process
