@@ -1,0 +1,1 @@
+body.archive.post-type-archive.post-type-archive-seminar:nth-child(2) div.mm-page.mm-slideout:nth-child(2) div.site-wrapper:nth-child(2) div.wrap.container:nth-child(4) div.content.row main.main.clearfix div.inspiration-wrap.clearfix div.inspiration-item.item-1.inspiration-puff:nth-child(1) div.item-inner p:nth-child(4) > a:nth-child(1)

@@ -1,0 +1,10 @@
+Verktyg button
+
+"//a[@id='hdtb-tls']"
+
+"//li[@id='ctr_countrySE']"
+
+"//a[contains(text()='Land: Sverige')]"
+
+"//div[contains(text()='Alla länder')]"
+

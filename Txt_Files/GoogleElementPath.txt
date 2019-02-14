@@ -1,0 +1,11 @@
+<input value="Jag har tur" aria-label="Jag har tur" name="btnI" type="submit" jsaction="sf.lck">
+
+<input value="Sök på Google" aria-label="Sök på Google" name="btnK" type="submit">
+
+<a style="display:" class="hdtb-tl" id="hdtb-tls" role="button" tabindex="0" data-ved="0ahUKEwji6qf0-aLgAhWLAhAIHSACAS4Q2x8IIA">Verktyg</a>
+
+<div class="mn-hd-txt">Alla språk</div>
+
+<span class="mn-dwn-arw"></span>
+
+<li class="hdtbItm" id="ctr_countrySE"><a class="q qs" href="/search?q=selenium+webdriver&amp;client=safari&amp;channel=iphone_bm&amp;source=lnt&amp;tbs=ctr:countrySE&amp;cr=countrySE&amp;sa=X&amp;ved=0ahUKEwjP1bbNuqrgAhUBhSwKHRGIB2QQpwUIJQ">Land: Sverige</a></li>
