@@ -1,7 +1,7 @@
 var webdriver = require('selenium-webdriver');
 var webdriver = webdriver.By;
 
-var driver = new webdriver.Builder().forBrowser('chrome').build();
+var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
 
 driver.get('https://www.google.se');
 
