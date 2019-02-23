@@ -55,38 +55,23 @@ driver.get('https://www.google.se/?client=safari&channel=iphone_bm');
 
 driver.manage().window().maximize();
 
-// Execute commands on the webpage here
-
-// Wait for browser to load
-
-driver.sleep(20000);
-
-// Execute findelement commands here
-
-driver.findElement(By.name('q')).sendKeys('Selenium Webdriver');
-driver.findElement(By.name('btnK')).click();
-    
-// Wait for browser to load
-
-driver.sleep(20000);
-
 /* Instantiate variable and store value meaning that webdriver must wait 
    until the element has been located, then click on the element */
 
-driver.sleep(20000);
+const element0 = driver.wait(until.elementLocated(By.name('q')), 30000);
+element0.sendKeys('Selenium Webdriver');
 
-var query0 = driver.wait(until.elementLocated(By.xpath("//a[@id='hdtb-tls']")));
-query0.click();
+const element1 = driver.wait(until.elementLocated(By.name('btnK')), 30000);
+element1.click();
 
-driver.sleep(20000);
+const element2 = driver.wait(until.elementLocated(By.xpath("//a[@id='hdtb-tls']")), 30000);
+element2.click();
 
-var query1 = driver.wait(until.elementLocated(By.css('span.mn-dwn-arw')));
-query1.click();
- 
-driver.sleep(20000);
+const element3 = driver.wait(until.elementLocated(By.css('span.mn-dwn-arw')), 30000);
+element3.click();
 
-var query2 = driver.wait(until.elementLocated(By.xpath("//li[@id='ctr_countrySE']")));
-query2.click(); 
+const element4 = driver.wait(until.elementLocated(By.xpath("//li[@id='ctr_countrySE']")), 30000);
+element4.click();
 
 /* If or else here to check if title is correct of the current page
    built inside of a function which is stored in variable. In the end
