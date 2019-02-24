@@ -34,10 +34,10 @@ clickToolsBtn.click();
 
 var dropDownMenu = driver.wait(until.elementLocated(By.css('div.mn-hd-txt')));
 dropDownMenu.isDisplayed().then(function() {
-        console.log(dropDownMenu.click() + ' Success: Clicked element');
+        console.log(dropDownMenu.isSelected() + dropDownMenu.click() + ' Success: Clicked element');
 });
 
-var chooseLang = driver.wait(until.elementLocated(By.xpath("//li[@id='ctr_countrySE']")));
-chooseLang.isDisplayed().then(function() {
-    console.log(chooseLang.click() + ' Success: Clicked element');
+var chooseCountry = driver.wait(until.elementLocated(By.xpath("//li[@id='ctr_countrySE']")));
+chooseCountry.isDisplayed().then(function() {
+    console.log(chooseCountry.isSelected() + chooseCountry.click() + ' Success: Clicked element');
 });
