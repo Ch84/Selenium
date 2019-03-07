@@ -4,3 +4,5 @@ body.hp.vasq:nth-child(2) div.ctr-p:nth-child(4) div.jhp.big:nth-child(4) form.t
 
 body.srp.tbo.vasq:nth-child(2) div.mdm:nth-child(4) div.hdtbna.notl div.hdtb-td-o:nth-child(2) div.hdtb-mn-cont div.hdtb-mn-hd:nth-child(2) > div.mn-hd-txt
 
+body.srp.tbo.vasq:nth-child(2) div.mdm:nth-child(4) div.hdtbna.notl div.hdtb-td-o:nth-child(2) div.hdtb-mn-cont div.hdtb-mn-hd:nth-child(8) > div.mn-hd-txt
+

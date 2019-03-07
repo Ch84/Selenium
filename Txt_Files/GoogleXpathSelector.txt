@@ -4,7 +4,6 @@ Verktyg button
 
 "//li[@id='ctr_countrySE']"
 
-"//a[contains(text()='Land: Sverige')]"
+"//div[@id='hdtb-rst']"
 
-"//div[contains(text()='Alla länder')]"
 
