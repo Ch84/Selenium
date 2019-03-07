@@ -60,10 +60,6 @@ searchField.sendKeys('webdriver');
 var clickSearchBtn = driver.findElement(By.name('btnK'));
 clickSearchBtn.click();
 
-// Driver will sleep here
-
-driver.sleep(20000);
-
 var clickToolsBtn = driver.wait(until.elementLocated(By.xpath("//a[@id='hdtb-tls']")));
 clickToolsBtn.isEnabled().then(function() {
 
@@ -88,9 +84,16 @@ clickToolsBtn.isEnabled().then(function() {
 
         });
 
-        console.log('Finished exeuting tests');
-
 });
+
+        var clickRestoreBtn = driver.wait(until.elementLocated(By.xpath("//div[@id='hdtb-rst']")));
+        clickRestoreBtn.isDisplayed().then(function() {
+
+            clickRestoreBtn.click();
+
+        });
+
+console.log('Finished exeuting tests');
 
 withTime.on('end', () => console.log('Done with execute'));
 
