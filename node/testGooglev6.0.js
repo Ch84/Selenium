@@ -72,28 +72,20 @@ clickToolsBtn.isEnabled().then(function() {
 
         var chooseCountry = driver.wait(until.elementLocated(By.css('div.mn-hd-txt')));
         chooseCountry.isDisplayed().then(function() {
-
             chooseCountry.click();
-
         });
 
         var chooseCountry2 = driver.wait(until.elementLocated(By.xpath("//li[@id='ctr_countrySE']")));
         chooseCountry2.isDisplayed().then(function() {
-
             chooseCountry2.click();
-
         });
 
 });
 
         var clickRestoreBtn = driver.wait(until.elementLocated(By.xpath("//div[@id='hdtb-rst']")));
         clickRestoreBtn.isDisplayed().then(function() {
-
             clickRestoreBtn.click();
-
         });
-
-console.log('Finished exeuting tests');
 
 withTime.on('end', () => console.log('Done with execute'));
 
