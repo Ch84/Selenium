@@ -12,4 +12,6 @@ Verktyg button
 
 "//input[@name='password']"
 
+"//div[@id='passwordNext']//content[@class='CwaK9']"
+
 
