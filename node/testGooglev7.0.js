@@ -69,7 +69,7 @@ driver.sleep(20000);
 
 // Continue execute
 
-var inputPassword = driver.wait(until.elementLocated(By.xpath("//input[@name='password']")), 000);
+var inputPassword = driver.wait(until.elementLocated(By.xpath("//input[@name='password']")));
 inputPassword.sendKeys('Gayatrikashunika');
 
 // Pause my driver
@@ -78,7 +78,7 @@ driver.sleep(20000);
 
 // Continue execute
 
-var clickNextBtn2 = driver.wait(until.elementLocated(By.css('span.RveJvd.snByac')));
+var clickNextBtn2 = driver.wait(until.elementLocated(By.xpath("//div[@id='passwordNext']//content[@class='CwaK9']")));
 clickNextBtn2.click();
 
 // Pause my driver
