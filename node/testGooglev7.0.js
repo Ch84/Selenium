@@ -57,6 +57,42 @@ driver.manage().window().maximize();
 var clickLoginBtn = driver.findElement(By.xpath("//a[@id='gb_70']"));
 clickLoginBtn.click();
 
+var inputEmail = driver.wait(until.elementLocated(By.xpath("//input[@id='identifierId']")));
+inputEmail.sendKeys('ch7751@gmail.com');
+
+var clickNextBtn = driver.wait(until.elementLocated(By.css('span.RveJvd.snByac')));
+clickNextBtn.click();
+
+// Pause my driver
+
+driver.sleep(20000);
+
+// Continue execute
+
+var inputPassword = driver.wait(until.elementLocated(By.xpath("//input[@name='password']")), 000);
+inputPassword.sendKeys('Gayatrikashunika');
+
+// Pause my driver
+
+driver.sleep(20000);
+
+// Continue execute
+
+var clickNextBtn2 = driver.wait(until.elementLocated(By.css('span.RveJvd.snByac')));
+clickNextBtn2.click();
+
+// Pause my driver
+
+driver.sleep(20000);
+
+// Continue execute
+
+var inputTextField = driver.wait(until.elementLocated(By.name('q')));
+inputTextField.sendKeys('webdriver');
+
+var clickSearchBtn = driver.wait(until.elementLocated(By.name('btnK')));
+clickSearchBtn.click();
+
 withTime.on('end', () => console.log('Done with execute'));
 
 withTime.execute(fs.readFile, __filename);
