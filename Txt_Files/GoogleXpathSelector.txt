@@ -7,3 +7,9 @@ Verktyg button
 "//div[@id='hdtb-rst']"
 
 "//a[@id='gb_70']"
+
+"//input[@id='identifierId']"
+
+"//input[@name='password']"
+
+
