@@ -2,6 +2,10 @@ Verktyg button
 
 "//a[@id='hdtb-tls']"
 
+"//div[@class='hdtb-td-o']//div[2]//span[1]"
+
+"//div[@id='hdtbMenus']//div[2]//span[1]"
+
 "//li[@id='ctr_countrySE']"
 
 "//div[@id='hdtb-rst']"
