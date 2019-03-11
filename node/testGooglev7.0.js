@@ -79,6 +79,8 @@ driver.sleep(20000);
 // Continue execute
 
 var clickNextBtn2 = driver.wait(until.elementLocated(By.xpath("//div[@id='passwordNext']//content[@class='CwaK9']")));
+clickNextBtn2.isDisplayed();
+clickNextBtn2.isEnabled();
 clickNextBtn2.click();
 
 // Pause my driver
