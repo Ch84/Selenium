@@ -30,3 +30,16 @@ var clickSearchBtn = driver.findElement(By.name('btnK'));
 clickSearchBtn.isDisplayed();
 clickSearchBtn.isEnabled();
 clickSearchBtn.click();
+
+var clickToolBtn = driver.wait(until.elementLocated(By.xpath("//a[@id='hdtb-tls']")));
+clickToolBtn.click();
+
+var clickCountry = driver.wait(until.elementLocated(By.css('div.mn-hd-txt')));
+clickCountry.isDisplayed();
+clickCountry.isEnabled();
+clickCountry.click();
+
+var chooseCountry = driver.wait(until.elementLocated(By.xpath("//li[@id='ctr_countrySE']")));
+chooseCountry.isDisplayed();
+chooseCountry.isEnabled();
+chooseCountry.click();
