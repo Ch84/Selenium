@@ -10,3 +10,9 @@ body.srp.tbo.vasq:nth-child(2) div:nth-child(10) div:nth-child(1) div.cF4V5c > a
 
 body.nyoS7c.UzCXuf.EIlDfe:nth-child(2) div.H2SoFe.LZgQXe.TFhTPc:nth-child(1) div.RAYh1e.LZgQXe.qmmlRd div.xkfVF div.JhUD8d.SQNfcc.vLGJgb div.zWl5kd div.DRS7Fe.bxPAYd.k6Zj8d div.pwWryf.bxPAYd:nth-child(2) div.Wxwduf.Us7fWe.JhUD8d div.zQJV3 div.dG5hZc div.qhFLie div.U26fgb.O0WRkf.zZhnYe.e3Duub.C0oVfc.nDKKZc.DL0QTb.M9Bg4d content.CwaK9 > span.RveJvd.snByac
 
+
+
+
+
+
+

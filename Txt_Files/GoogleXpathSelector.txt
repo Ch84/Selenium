@@ -18,4 +18,6 @@ Verktyg button
 
 "//div[@id='passwordNext']//content[@class='CwaK9']"
 
+"//*[@id='_xiyWq3kzikvjM:']"
+
 
