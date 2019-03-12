@@ -40,3 +40,4 @@ var clickImage = driver.wait(until.elementLocated(By.xpath("//*[@id='_xiyWq3kzik
 clickImage.isDisplayed();
 clickImage.isEnabled();
 clickImage.click();
+
