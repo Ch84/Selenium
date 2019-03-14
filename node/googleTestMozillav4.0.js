@@ -22,16 +22,12 @@ console.log('Executing webdriver...');
 var inputText = driver.findElement(By.name('q'));
 inputText.sendKeys('webdriver');
 
-driver.sleep(1000).then(function() {
-
-    driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
-
-});
-
 var clickSearchBtn = driver.findElement(By.name('btnK'));
 clickSearchBtn.isDisplayed();
 clickSearchBtn.isEnabled();
 clickSearchBtn.click();
+
+// If title is found then the test is passed, else failed.
 
 driver.sleep(2000).then(function() {
 
