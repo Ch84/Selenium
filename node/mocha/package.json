@@ -1,0 +1,18 @@
+{
+  "name": "swdtest",
+  "version": "1.0.0",
+  "description": "Selenium Webdriver Test",
+  "main": "index.js",
+  "devDependencies": {
+    "chromedriver": "latest",
+    "cross-env": "latest",
+    "debug": "latest",
+    "mocha": "latest",
+    "selenium-webdriver": "latest"
+  },
+  "scripts": {
+    "test": "cross-env SELENIUM_BROWSER=chrome DEBUG=* mocha googleTest.js --timeout 60000"
+  },
+  "author": "Christian Hall <https://github.com/Ch84>",
+  "license": "ISC"
+}
