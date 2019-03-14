@@ -8,4 +8,6 @@
 
 <li class="hdtbItm" id="ctr_countrySE"><a class="q qs" href="/search?q=selenium+webdriver&amp;client=safari&amp;channel=iphone_bm&amp;source=lnt&amp;tbs=ctr:countrySE&amp;cr=countrySE&amp;sa=X&amp;ved=0ahUKEwjP1bbNuqrgAhUBhSwKHRGIB2QQpwUIJQ">Land: Sverige</a></li>
 
+<img class="irc_mi" src="https://www.guru99.com/images/WebDriver_and_Browsers(1).jpg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" alt="Relaterad bild" width="332" height="353" style="" data-iml="1552584603128" xpath="1">
+
 
