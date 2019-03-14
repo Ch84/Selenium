@@ -11,6 +11,10 @@ until = webdriver.until;
 
 var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.firefox()).build();
 
+// Maximize browser window
+
+driver.manage().window().maximize();
+
 // Get Google Web Page
 
 driver.get('https://www.google.com');
@@ -31,6 +35,8 @@ clickSearchBtn.click();
 
 driver.sleep(20000);
 
+// Continue execution
+
 var clickImages = driver.wait(until.elementLocated(By.css('a.q.qs')));
 clickImages.isDisplayed();
 clickImages.isEnabled();
@@ -41,3 +47,7 @@ clickImage.isDisplayed();
 clickImage.isEnabled();
 clickImage.click();
 
+var enlargeImage = driver.wait(until.elementLocated(By.css('img.irc_mi')));
+enlargeImage.isDisplayed();
+enlargeImage.isSelected();
+enlargeImage.click();
