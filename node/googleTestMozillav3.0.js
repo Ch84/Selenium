@@ -47,7 +47,7 @@ clickImage.isDisplayed();
 clickImage.isEnabled();
 clickImage.click();
 
-var enlargeImage = driver.wait(until.elementLocated(By.css('img.irc_mi')));
+var enlargeImage = driver.wait(until.elementLocated(By.linkText("Relaterad bild")));
 enlargeImage.isDisplayed();
 enlargeImage.isSelected();
 enlargeImage.click();
