@@ -8,11 +8,13 @@ const {suite} = require('selenium-webdriver/testing');
 
 suite(function(env) {
 
-    // Mocha BDD
+    // Mocha BDD and set up describe scenario
 
     describe('Google Search Engine scenario', function() {
 
         let driver;
+
+        // Set up the debugger for driver before execution of tests
 
         before(async function() {
 
@@ -21,6 +23,8 @@ suite(function(env) {
 
         });
 
+        // Close the browser after execution is complete
+
         after(function() {
 
             debug('driver teardown');
@@ -28,6 +32,8 @@ suite(function(env) {
             driver = null;
 
         });
+
+        // Execute tests
 
         it('should maximize the browser window', async function() {
 
@@ -52,13 +58,21 @@ suite(function(env) {
 
         });
 
-        it('should click on link to a webdriver website', async function() {
+        it('should click on link to a webdriver website and then click the Documentation tab', async function() {
 
-            debug('clicking link');
+            debug('clicking link first and then documentation tab on site');
+            await driver.sleep(2000);
             await driver.get('https://www.seleniumhq.org/projects/webdriver');
             await driver.wait(
                 until.titleIs('Selenium WebDriver'),
             1000)
+            await driver.wait(
+                until.elementLocated(By.xpath("//li[@id='menu_documentation']")),
+                1000)
+            await driver.wait(
+                until.titleIs('Selenium Documentation — Selenium Documentation'), 
+                1000)
+            debug('done');
 
         });
 
