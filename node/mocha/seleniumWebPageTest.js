@@ -75,6 +75,22 @@ suite(function(env) {
 
         });
 
+        it('should find and click on csharp label', async function() {
+
+            debug('found the csharp label');
+            await driver.sleep(5000);
+            let clickLabel = await driver.findElement(
+                By.xpath("//body[@class='sectionDocumentation push']"));
+            let clickLabel2 = await driver.wait(
+                until.elementLocated(By.xpath("//div[@id='mainContent']")));
+                until.elementIsEnabled(By.xpath("//div[@id='mainContent']"));
+            debug('clicked the csharp label');
+            await clickLabel.sendKeys(Key.TAB);
+            await clickLabel2.sendKeys(Key.RETURN);
+            debug('done');
+
+        });
+
     });
 
 });
