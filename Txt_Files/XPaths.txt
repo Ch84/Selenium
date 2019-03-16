@@ -2,3 +2,7 @@
 "//li[@id='menu_documentation']"
 
 "//a[@title='Technical references and guides']"
+
+"//div[@id='mainContent']"
+
+"//body[@class='sectionDocumentation push']"

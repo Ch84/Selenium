@@ -1,2 +1,6 @@
 
 body.sectionProjects.push:nth-child(2) div:nth-child(6) div:nth-child(1) ul:nth-child(2) li:nth-child(3) > a:nth-child(1)
+
+body.sectionDocumentation.push:nth-child(2) div.document:nth-child(2) div.documentwrapper div.bodywrapper div.body div.section div.toctree-wrapper.compound:nth-child(3) ul:nth-child(1) li.toctree-l1:nth-child(1) > a.reference.internal
+
+body.sectionDocumentation.push:nth-child(2) div:nth-child(3) div:nth-child(2) ul:nth-child(2) li:nth-child(2) > input:nth-child(1)	
