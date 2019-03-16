@@ -53,12 +53,24 @@ suite(function(env) {
 
         it('should find and click the element', async function() {
 
-            debug('found and clicked the element');
+            debug('found the element');
             await driver.sleep(5000);
-            let el = await driver.findElement(By.xpath("//a[@title='Technical references and guides']"));
-            debug('click element');
-            await el.sendKeys(Key.TAB);
-            await el.sendKeys(Key.RETURN);
+            let clickDocumentationTab = await driver.findElement(By.xpath("//a[@title='Technical references and guides']"));
+            debug('clicked the element');
+            await clickDocumentationTab.sendKeys(Key.TAB);
+            await clickDocumentationTab.sendKeys(Key.RETURN);
+            debug('done');
+
+        });
+
+        it('should find and click on link', async function() {
+
+            debug('found the link');
+            await driver.sleep(5000);
+            let clickLink = await driver.findElement(By.css('a.reference.internal'));
+            debug('clicked the link');
+            await clickLink.sendKeys(Key.TAB);
+            await clickLink.sendKeys(Key.RETURN);
             debug('done');
 
         });
