@@ -51,9 +51,9 @@ suite(function(env) {
 
         });
 
-        it('should find element', async function() {
+        it('should find and click the element', async function() {
 
-            debug('find element');
+            debug('found and clicked the element');
             await driver.sleep(5000);
             let el = await driver.findElement(By.xpath("//a[@title='Technical references and guides']"));
             debug('click element');
