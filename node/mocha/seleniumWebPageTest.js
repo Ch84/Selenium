@@ -75,18 +75,26 @@ suite(function(env) {
 
         });
 
-        it('should find and click on csharp label', async function() {
+        it('should find and click the element csharp label', async function() {
 
-            debug('found the csharp label');
+            debug('found the element csharp label');
             await driver.sleep(5000);
-            let clickLabel = await driver.findElement(
-                By.xpath("//body[@class='sectionDocumentation push']"));
-            let clickLabel2 = await driver.wait(
-                until.elementLocated(By.xpath("//div[@id='mainContent']")));
-                until.elementIsEnabled(By.xpath("//div[@id='mainContent']"));
+            let clickLabel = await driver.findElement(By.xpath("//input[@value='csharp']"));    
             debug('clicked the csharp label');
             await clickLabel.sendKeys(Key.TAB);
-            await clickLabel2.sendKeys(Key.RETURN);
+            await clickLabel.sendKeys(Key.RETURN);
+            debug('done');
+
+        });
+
+        it('should find and click the issue link', async function() {
+
+            debug('found the issue link');
+            await driver.sleep(5000);
+            let clickIssueLink = await driver.findElement(By.xpath("//a[@class='reference external']"));
+            debug('clicked the issue link');
+            await clickIssueLink.sendKeys(Key.TAB);
+            await clickIssueLink.sendKeys(Key.RETURN);
             debug('done');
 
         });
