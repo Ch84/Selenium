@@ -6,3 +6,7 @@
 "//div[@id='mainContent']"
 
 "//body[@class='sectionDocumentation push']"
+
+"//input[@value='csharp']"
+
+"//a[@class='reference external']"
