@@ -7,3 +7,5 @@
 
 <title xpath="1">Search · webdriver · GitHub</title>
 
+<title> Sign in to GitHub · GitHub </title>
+

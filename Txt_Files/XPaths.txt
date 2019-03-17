@@ -14,3 +14,9 @@
 "//input[@placeholder='Search or jump to…']"
 
 "//input[@placeholder='Search']"
+
+"//input[@id='login_field']"
+
+"//input[@id='password']"
+
+"//input[@value='Sign in']"
