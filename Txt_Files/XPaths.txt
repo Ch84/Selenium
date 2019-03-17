@@ -10,3 +10,7 @@
 "//input[@value='csharp']"
 
 "//a[@class='reference external']"
+
+"//input[@placeholder='Search or jump to…']"
+
+"//input[@placeholder='Search']"

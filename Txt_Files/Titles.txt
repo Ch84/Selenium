@@ -4,3 +4,6 @@
 <title> Selenium Documentation — Selenium Documentation </title>
 
 <title> Note to the Reader - Docs Being Revised for Selenium 2.0! — Selenium Documentation </title>
+
+<title xpath="1">Search · webdriver · GitHub</title>
+
