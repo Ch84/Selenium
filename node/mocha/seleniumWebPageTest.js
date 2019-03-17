@@ -99,6 +99,20 @@ suite(function(env) {
 
         });
 
+        it('should continue to test on Github and give input in the text search field', async function() {
+
+            debug('continuing execution of tests');
+            await driver.sleep(5000);
+            let inputText = await driver.findElement(By.xpath("//input[@placeholder='Search']"));
+            debug('gave input');
+            await inputText.sendKeys('webdriver', Key.RETURN);
+            await driver.wait(
+                until.titleIs('Search · webdriver · GitHub'),
+                1000);
+            debug('done');
+
+        });
+
     });
 
 });
