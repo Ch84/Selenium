@@ -35,7 +35,69 @@ suite(function(env) {
 
         });
 
-        
+        // Maximize the browser window and get the web page, execute tests
+
+        it('should maximize the browser window', async function() {
+
+            debug('maximixing window');
+            await driver.manage().window().maximize();
+            debug('done');
+
+        });
+
+        it('should fetch the web page', async function() {
+
+            debug('fetching web page');
+            await driver.get('https://github.com');
+            debug('done');
+
+        });
+
+        it('should click the sign in button', async function() {
+
+            debug('clicking the sign in button');
+            await driver.sleep(5000);
+            let clickLogInBtn = await driver.findElement(By.css('a.HeaderMenu-link.no-underline.mr-3:nth-child(2)'));
+            await clickLogInBtn.sendKeys(Key.TAB);
+            await clickLogInBtn.sendKeys(Key.RETURN);
+            debug('done');
+
+        });
+
+        it('should input the user credentials', async function() {
+
+            debug('sending input');
+            await driver.sleep(5000);
+            let inputUserName = await driver.findElement(By.xpath("//input[@id='login_field']"));
+            let inputPassword = await driver.findElement(By.xpath("//input[@id='password']"));
+            await inputUserName.sendKeys('CH84');
+            await inputPassword.sendKeys('Gayathri1991');
+            debug('done');
+
+        });
+
+        it('should click the sign in button', async function() {
+
+            debug('clicking sign in button');
+            await driver.sleep(5000);
+            let signInBtn = driver.findElement(By.xpath("//input[@value='Sign in']"));
+            await signInBtn.sendKeys(Key.TAB);
+            await signInBtn.sendKeys(Key.RETURN);
+            debug('done');
+
+        });
+
+        it('should give input in the Repositories text search field and press the Selenium link', async function() {
+
+            debug('sending input');
+            await driver.sleep(5000);
+            let inputSearchText = await driver.findElement(By.xpath("//input[@id='dashboard-repos-filter-left']"));
+            await inputSearchText.sendKeys('CH84/Selenium');
+            await inputSearchText.sendKeys(Key.TAB);
+            await inputSearchText.sendKeys(Key.RETURN);
+            debug('done');
+
+        });
 
     });
 
