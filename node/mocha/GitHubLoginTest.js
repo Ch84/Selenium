@@ -35,7 +35,7 @@ suite(function(env) {
 
         });
 
-        // Execute tests
+        // Maximize the browser window and get the web page, execute tests
 
         it('should maximize the browser window', async function() {
 
