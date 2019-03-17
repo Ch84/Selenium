@@ -20,3 +20,5 @@
 "//input[@id='password']"
 
 "//input[@value='Sign in']"
+
+"//input[@id='dashboard-repos-filter-left']"

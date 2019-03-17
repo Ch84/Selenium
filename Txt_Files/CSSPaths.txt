@@ -7,3 +7,4 @@ body.sectionDocumentation.push:nth-child(2) div:nth-child(3) div:nth-child(2) ul
 
 body.sectionDocumentation:nth-child(2) div.document:nth-child(3) div.documentwrapper div.bodywrapper div.body div.section p:nth-child(4) > a.reference.external:nth-child(2)
 
+body.logged-out.env-production.page-responsive.min-width-0.f4.intent-mouse:nth-child(2) div.position-relative.js-header-wrapper:nth-child(1) header.Header.header-logged-out.js-details-container.Details.position-relative.f4.py-3 div.container-lg.d-lg-flex.flex-items-center.p-responsive div.HeaderMenu.HeaderMenu--logged-out.position-fixed.top-0.right-0.bottom-0.height-fit.position-lg-relative.d-lg-flex.flex-justify-between.flex-items-center.flex-auto div.d-lg-flex.flex-items-center.px-3.px-lg-0.text-center.text-lg-left > a.HeaderMenu-link.no-underline.mr-3:nth-child(2)
