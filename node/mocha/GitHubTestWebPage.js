@@ -56,7 +56,7 @@ suite(function(env) {
         it('should click the sign in button', async function() {
 
             debug('clicking the sign in button');
-            await driver.sleep(5000);
+            await driver.sleep(2000);
             let clickLogInBtn = await driver.findElement(By.css('a.HeaderMenu-link.no-underline.mr-3:nth-child(2)'));
             await clickLogInBtn.sendKeys(Key.TAB);
             await clickLogInBtn.sendKeys(Key.RETURN);
@@ -67,7 +67,7 @@ suite(function(env) {
         it('should input the user credentials', async function() {
 
             debug('sending input');
-            await driver.sleep(5000);
+            await driver.sleep(2000);
             let inputUserName = await driver.findElement(By.xpath("//input[@id='login_field']"));
             let inputPassword = await driver.findElement(By.xpath("//input[@id='password']"));
             await inputUserName.sendKeys('CH84');
@@ -79,7 +79,7 @@ suite(function(env) {
         it('should click the sign in button', async function() {
 
             debug('clicking sign in button');
-            await driver.sleep(5000);
+            await driver.sleep(2000);
             let signInBtn = driver.findElement(By.xpath("//input[@value='Sign in']"));
             await signInBtn.sendKeys(Key.TAB);
             await signInBtn.sendKeys(Key.RETURN);
@@ -89,12 +89,14 @@ suite(function(env) {
 
         it('should give input in the Repositories text search field and press the Selenium link', async function() {
 
-            debug('sending input');
-            await driver.sleep(5000);
+            debug('finding element');
+            await driver.sleep(2000);
             let inputSearchText = await driver.findElement(By.xpath("//input[@id='dashboard-repos-filter-left']"));
-            await inputSearchText.sendKeys('CH84/Selenium');
-            await inputSearchText.sendKeys(Key.TAB);
-            await inputSearchText.sendKeys(Key.RETURN);
+            debug('sending input and clicking the ch84/selenium link');
+            await inputSearchText.sendKeys('CH84/Selenium', Key.TAB, Key.RETURN);
+            await driver.wait(
+                until.titleIs('Ch84/Selenium'),
+                1000);            
             debug('done');
 
         });
