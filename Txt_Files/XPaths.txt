@@ -19,6 +19,16 @@
 
 "//input[@id='password']"
 
+"//a[@title='Error_Handlers']"
+
 "//input[@value='Sign in']"
 
 "//input[@id='dashboard-repos-filter-left']"
+
+"//a[@title='Error_Handlers']"
+
+"//a[@data-pjax='#js-repo-pjax-container']"
+
+"//a[@class='url fn']"
+
+"//div[@class='d-flex']//li[3]"
