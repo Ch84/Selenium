@@ -101,6 +101,31 @@ suite(function(env) {
 
         });
 
+        it('should click the Error_Handlers link', async function() {
+
+            debug('searching webelement for link');
+            await driver.sleep(2000);
+            let clickErrorLink = driver.findElement(By.xpath("//a[@title='Error_Handlers']"));
+            debug('clicked link');
+            await clickErrorLink.sendKeys(Key.TAB);
+            await clickErrorLink.sendKeys(Key.RETURN);
+            await driver.sleep(5000);
+            debug('done');
+
+        });
+
+        it('should click the link to the txt file', async function() {
+
+            debug('searching webelement for link');
+            await driver.sleep(2000);
+            let clickTxtLink = driver.findElement(By.xpath("//a[@title='errorHandlerEventTimeSync.txt']"));
+            debug('clicked link');
+            await clickTxtLink.sendKeys(Key.TAB);
+            await clickTxtLink.sendKeys(Key.RETURN);
+            await driver.sleep(5000);
+
+        });
+
     });
 
 });
