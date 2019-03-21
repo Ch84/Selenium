@@ -32,3 +32,5 @@
 "//a[@class='url fn']"
 
 "//div[@class='d-flex']//li[3]"
+
+"//a[@title='errorHandlerEventTimeSync.txt']"
