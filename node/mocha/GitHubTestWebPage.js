@@ -123,6 +123,7 @@ suite(function(env) {
             await clickTxtLink.sendKeys(Key.TAB);
             await clickTxtLink.sendKeys(Key.RETURN);
             await driver.sleep(5000);
+            debug('done');
 
         });
 
