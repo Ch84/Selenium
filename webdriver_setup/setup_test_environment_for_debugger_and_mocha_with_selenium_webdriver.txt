@@ -4,7 +4,7 @@ const debug = require('debug')('swdtest');
 const {By, Key, until} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 
-// Set up Selenium Webdriver suite
+// Set up Selenium Webdriver suite environment
 
 suite(function(env) {
 
