@@ -105,6 +105,50 @@ suite(function(env) {
 
         });
 
+        it('should click on the down arrow button for selecting a language', async function() {
+
+            debug('searching for webelement for down arrow btn');
+            let clickDownArrowBtn2 = await driver.findElement(By.xpath("//div[@jscontroller='qik19b']//div[3]//span[1]"));
+            debug('clicked the down arrow btn');
+            await (await clickDownArrowBtn2.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
+        it('should click on the selected language', async function() {
+
+            debug('searching for webelement for the current language');
+            let clickLangBtn = await driver.findElement(By.xpath("//a[contains(text(),'Sidor skrivna på svenska')]"));
+            debug('clicked lang btn');
+            await (await clickLangBtn.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
+        it('should click on the down arrow button for selecting a time period', async function() {
+
+            debug('searching for webelement for down arrow btn');
+            let clickDownArrowBtn3 = await driver.findElement(By.xpath("//div[@jscontroller='qik19b']//div[4]//span[1]"));
+            debug('clicked down arrow btn');
+            await (await clickDownArrowBtn3.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
+        it('should click on the latest hour button', async function() {
+
+            debug('searching for webelement for the latest hour btn');
+            let clickLatestHourBtn = await driver.findElement(By.xpath("//a[contains(text(),'Senaste timmen')]"));
+            debug('clicked the latest hour btn');
+            await (await clickLatestHourBtn.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
     });
 
 });
