@@ -127,6 +127,32 @@ suite(function(env) {
 
         });
 
+        // For clicking elements test code should be written as below
+
+        it('should click on the user links', async function() {
+
+            debug('searching webelement xpath for user links');
+            await driver.sleep(2000);
+            let clickUsrLinks = driver.findElement(By.xpath("//img[@class='avatar float-left mr-1']"));
+            debug('clicked link image for dropdown menu');
+            await (await clickUsrLinks.click());
+            await driver.sleep(5000);
+            debug('done');
+
+        });
+
+        it('should click the sign out menu button', async function() {
+
+            debug('searching for webelement for sign out btn');
+            await driver.sleep(2000);
+            let clickSignOutBtn = await driver.findElement(By.xpath("//form[@class='logout-form']//button[@type='submit'][contains(text(),'Sign out')]"));
+            debug('clicked sign out btn');
+            await (await clickSignOutBtn.click());
+            await driver.sleep(5000);
+            debug('done');
+
+        });
+
     });
 
 });
