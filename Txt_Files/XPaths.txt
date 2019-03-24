@@ -34,3 +34,7 @@
 "//div[@class='d-flex']//li[3]"
 
 "//a[@title='errorHandlerEventTimeSync.txt']"
+
+"//img[@class='avatar float-left mr-1']"
+
+"//form[@class='logout-form']//button[@type='submit'][contains(text(),'Sign out')]"
