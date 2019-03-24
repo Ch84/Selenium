@@ -2,6 +2,12 @@ Verktyg button
 
 "//a[@id='hdtb-tls']"
 
+"//div[@id='hdtbMenus']//div[2]//span[1]"
+
+"//div[@jscontroller='qik19b']//div[3]//span[1]"
+
+"//div[@jscontroller='qik19b']//div[4]//span[1]"
+
 "//li[@id='ctr_countrySE']"
 
 "//div[@id='hdtb-rst']"
@@ -16,4 +22,6 @@ Verktyg button
 
 "//*[@id='_xiyWq3kzikvjM:']"
 
+"//a[contains(text(),'Sidor skrivna på svenska')]"
 
+"//a[contains(text(),'Senaste timmen')]"
