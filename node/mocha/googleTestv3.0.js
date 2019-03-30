@@ -86,6 +86,50 @@ suite(async function(env) {
 
             });
 
+            it('should click on the button for tools', async function() {
+
+                debug('searching for the webelement for the tools btn');
+                let clickToolsBtn = await driver.findElement(By.xpath("//a[@id='hdtb-tls']"));
+                debug('clicked the tools btn');
+                await (await clickToolsBtn.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should click on the filter function for anytime', async function() {
+
+                debug('searching for the webelement for filter function anytime');
+                let clickFilterAnytime = await driver.findElement(By.xpath("//div[contains(text(),'När som helst')]"));
+                debug('clicked the anytime filter');
+                await (await clickFilterAnytime.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should select the adapted period choice in dropdown menu', async function() {
+
+                debug('searching for the webelement for the adapted period choice');
+                let clickAdaptedPeriod = await driver.findElement(By.xpath("//span[@class='q']"));
+                debug('clicked on the adapted period choice');
+                await (await clickAdaptedPeriod.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should input a date in the first text box', async function() {
+
+                debug('searching for the webelement for the first input box');
+                let inputDateBox = await driver.findElement(By.xpath("//input[@id='cdr_min']"));
+                debug('sent date input');
+                await inputDateBox.sendKeys('2019-04-01');
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
        });
 
 });
