@@ -43,6 +43,49 @@ suite(async function(env) {
 
             });
 
+            // Maximize the browser window
+
+            it('should maximize the browser window', async function() {
+
+                debug('maximized the browser window');
+                await driver.manage().window().maximize();
+                debug('done');
+            
+            });
+
+            // Begin executon of tests here
+
+            it('should fetch the google web page', async function() {
+
+                debug('fetched the site');
+                await driver.get('https://www.google.se');
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should input webdriver in the text search field', async function() {
+
+                debug('searching for the webelement for the text search field');
+                let inputTxtSearchField = await driver.findElement(By.name('q'));
+                debug('sent input webdriver');
+                await inputTxtSearchField.sendKeys('webdriver');
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should click on the search button', async function() {
+
+                debug('searching for the webelement for the search btn');
+                let clickSearchBtn = await driver.findElement(By.name('btnK'));
+                debug('clicked the search btn');
+                await (await clickSearchBtn.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
        });
 
 });
