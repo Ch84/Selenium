@@ -1,33 +1,41 @@
-// Call webdriver and set up the debugger
+// Call the debugger and Selenium Webdriver from library
 
 const debug = require('debug')('swdtest');
 const {By, Key, until} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 
-// Set up Selenium Webdriver suite environment
+// Set up the suite environment within an async function with parameter env
 
-suite(function(env) {
+suite(async function(env) {
 
-    // Mocha BDD and set up describe scenario
+    /* Set up the describe scenario within an async function and explain what
+       the test scenario is */
 
-    describe('GitHub Log In Test Scenario', async function() {
+    describe('Google Test Web Page Scenario', async function() {
 
-        // Create variable driver and declare it
+        // Create the variable driver and declare it
 
         let driver;
 
-        // Set up the debugger for driver before execution of tests
+        // Before execution of tests create async function here
 
         before(async function() {
 
+            /* Set up the debugger with the driver here and use the driver variable to build the environment
+            with the parameter env and with the await command */
+
             debug('driver setup');
-            driver = await env.builder().build();
+            driver = await env.builder().build()
 
         });
 
-        // Close the browser after execution is complete
+        // After execution close the browser within a normal function here
 
         after(function() {
+
+	    /* Set up the debugger here to teardown the driver
+               and use the driver quit command and use driver 
+               variable to set to null */
 
             debug('driver teardown');
             driver.quit();
@@ -35,8 +43,6 @@ suite(function(env) {
 
         });
 
-
     });
-
 
 });
