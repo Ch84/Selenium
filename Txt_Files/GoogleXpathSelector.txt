@@ -2,11 +2,23 @@ Verktyg button
 
 "//a[@id='hdtb-tls']"
 
-"//div[@id='hdtbMenus']//div[2]//span[1]"
+"//div[contains(text(),'När som helst')]"
 
-"//div[@jscontroller='qik19b']//div[3]//span[1]"
+"//span[@class='q']"
 
-"//div[@jscontroller='qik19b']//div[4]//span[1]"
+"//input[@id='cdr_min']"
+
+"//a[contains(text(),'Sidor skrivna på svenska')]"
+
+"//a[contains(text(),'Senaste timmen')]"
+
+"//div[contains(text(),'Sorterat efter relevans')]"
+
+"//a[contains(text(),'Sorterat efter datum')]"
+
+"//div[contains(text(),'Alla resultat')]"
+
+"//a[contains(text(),'Ordagrant')]"
 
 "//li[@id='ctr_countrySE']"
 
@@ -21,17 +33,5 @@ Verktyg button
 "//div[@id='passwordNext']//content[@class='CwaK9']"
 
 "//*[@id='_xiyWq3kzikvjM:']"
-
-"//a[contains(text(),'Sidor skrivna på svenska')]"
-
-"//a[contains(text(),'Senaste timmen')]"
-
-"//div[contains(text(),'Sorterat efter relevans')]"
-
-"//a[contains(text(),'Sorterat efter datum')]"
-
-"//div[contains(text(),'Alla resultat')]"
-
-"//a[contains(text(),'Ordagrant')]"
 
 "//div[@id='hdtb-rst']"
