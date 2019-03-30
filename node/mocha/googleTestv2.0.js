@@ -171,6 +171,39 @@ suite(function(env) {
 
         });
 
+        it('should click on the reset all button', async function() {
+
+            debug('searching for webelement for the all results btn');
+            let clickAllResultsBtn = await driver.findElement(By.xpath("//div[contains(text(),'Alla resultat')]"));
+            debug('clicked all results btn');
+            await (await clickAllResultsBtn.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
+        it('should click on the verbatim button', async function() {
+
+            debug('searcing for webelement for the verbatim btn');
+            let clickVerbatimBtn = await driver.findElement(By.xpath("//a[contains(text(),'Ordagrant')]"));
+            debug('clicked the verbatim btn');
+            await (await clickVerbatimBtn.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
+        it('should click the restore button', async function() {
+
+            debug('searching for webelement for the restore btn');
+            let clickRestoreBtn = await driver.findElement(By.xpath("//div[@id='hdtb-rst']"));
+            debug('clicked the restore btn');
+            await (await clickRestoreBtn.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
     });
 
 });
