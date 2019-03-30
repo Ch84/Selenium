@@ -149,6 +149,28 @@ suite(function(env) {
 
         });
 
+        it('should click on the sorted after relevans button', async function() {
+
+            debug('searching for webelement for the sorted after relevans button');
+            let SortRelevansBtn = await driver.findElement(By.xpath("//div[contains(text(),'Sorterat efter relevans')]"));
+            debug('clicked sorted after relevans btn');
+            await (await SortRelevansBtn.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
+        it('should click on the sorted after date button', async function() {
+
+            debug('searching for the webelement for the sorted after date btn');
+            let clickSortedDateBtn = await driver.findElement(By.xpath("//a[contains(text(),'Sorterat efter datum')]"));
+            debug('clicked sorted after date btn');
+            await (await clickSortedDateBtn.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
     });
 
 });
