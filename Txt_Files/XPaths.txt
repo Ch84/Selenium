@@ -42,3 +42,9 @@
 "//div[contains(text(),'Sorterat efter relevans')]"
 
 "//a[contains(text(),'Sorterat efter datum')]"
+
+"//div[contains(text(),'Alla resultat')]"
+
+"//a[contains(text(),'Ordagrant')]"
+
+"//div[@id='hdtb-rst']"
