@@ -8,6 +8,10 @@ Verktyg button
 
 "//input[@id='cdr_min']"
 
+"//body[@class='srp tbo vasq']/div/div[contains(@class,'mdm')]/div/div[@class='cdr_cont']/div[@class='cdr_dlg']/div[@class='cdr_sft']/form[@class='cdr_frm']/input[6]"
+
+"//form[@id='cdr_frm']//input[@value='Kör']"
+
 "//a[contains(text(),'Sidor skrivna på svenska')]"
 
 "//a[contains(text(),'Senaste timmen')]"
