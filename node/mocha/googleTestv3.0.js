@@ -122,9 +122,42 @@ suite(async function(env) {
             it('should input a date in the first text box', async function() {
 
                 debug('searching for the webelement for the first input box');
-                let inputDateBox = await driver.findElement(By.xpath("//input[@id='cdr_min']"));
+                let inputFirstDateBox = await driver.findElement(By.xpath("//input[@id='cdr_min']"));
                 debug('sent date input');
-                await inputDateBox.sendKeys('2019-04-01');
+                await inputFirstDateBox.sendKeys('2019-04-01');
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should input a date in the second text box', async function() {
+
+                debug('searchin for the webelement for the second input box');
+                let inputSecondDateBox = await driver.findElement(By.xpath("//body[@class='srp tbo vasq']/div/div[contains(@class,'mdm')]/div/div[@class='cdr_cont']/div[@class='cdr_dlg']/div[@class='cdr_sft']/form[@class='cdr_frm']/input[6]"));
+                debug('sent date input');
+                await inputSecondDateBox.sendKeys('2019-04-30');
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should click on the submit button', async function() {
+
+                debug('searching for the webelement for the submit btn');
+                let clickSubmitBtn = await driver.findElement(By.xpath("//form[@id='cdr_frm']//input[@value='Kör']"));
+                debug('clicked the submit btn');
+                await (await clickSubmitBtn.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should click on the restore button', async function() {
+
+                debug('searching for the webelement for the restore btn');
+                let clickRestoreBtn = await driver.findElement(By.xpath("//div[@id='hdtb-rst']"));
+                debug('clicked the restore btn');
+                await (await clickRestoreBtn.click());
                 await driver.sleep(2000);
                 debug('done');
 
