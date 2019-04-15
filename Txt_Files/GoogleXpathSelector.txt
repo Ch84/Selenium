@@ -39,3 +39,15 @@ Verktyg button
 "//*[@id='_xiyWq3kzikvjM:']"
 
 "//div[@id='hdtb-rst']"
+
+"//a[@class='gb_5d gb_1 gb_kb']"
+
+"//input[@name='identifier']"
+
+"//div[@id='identifierNext']"
+
+"//input[@name='password']"
+
+"//div[@id='passwordNext']"
+
+"//a[contains(text(),'Gmail')]"
