@@ -43,6 +43,8 @@ suite(async function(env) {
 
             });
 
+            // Fetch google web page
+
             it('should fetch the Google Web Page', async function() {
                 
                 debug('fetching google site');
@@ -60,6 +62,8 @@ suite(async function(env) {
                 debug('done');
 
             });
+
+            // Execute tests
 
             it('should press the login button', async function() {
 

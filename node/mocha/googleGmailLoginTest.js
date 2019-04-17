@@ -70,7 +70,16 @@ suite(async function(env) {
 
             });
 
-            
+            it('should click on the Log In link', async function() {
+
+                debug('searching for webelement for log in link');
+                let clickLoginLink = await driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[5]/ul[1]/li[2]/a"));
+                debug('clicked log in link');
+                await (await clickLoginLink.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
 
        });
 
