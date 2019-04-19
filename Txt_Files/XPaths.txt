@@ -38,3 +38,5 @@
 "//img[@class='avatar float-left mr-1']"
 
 "//form[@class='logout-form']//button[@type='submit'][contains(text(),'Sign out')]"
+
+"//input[@placeholder='E-postadress eller telefonnummer']"

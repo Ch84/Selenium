@@ -40,4 +40,4 @@ Verktyg button
 
 "//a[contains(text(),'Gmail')]"
 
-"//body[@class='aAU']"
+"//a[@title='Skickat']"
