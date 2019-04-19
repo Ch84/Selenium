@@ -114,6 +114,28 @@ suite(async function(env) {
                 let clickSecondNextBtn = await driver.findElement(By.xpath("//div[@id='passwordNext']//content[@class='CwaK9']"));
                 debug('clicked next btn');
                 await (await clickSecondNextBtn.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should click on the gmail link', async function() {
+
+                debug('searching for webelement for gmail link');
+                let clickGmailLink = await driver.findElement(By.xpath("//a[contains(text(),'Gmail')]"));
+                debug('clicked gmail link');
+                await (await clickGmailLink.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should click on the user for chat interaction', async function() {
+
+                debug('searching for webelement for chat interaction');
+                let chat = await driver.findElement(By.xpath("//a[@title='Skickat']"));
+                debug('clicked user name for chat');
+                await (await chat.click());
                 await driver.sleep(5000);
                 debug('done');
 
