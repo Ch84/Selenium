@@ -39,3 +39,5 @@ Verktyg button
 "//div[@id='passwordNext']//content[@class='CwaK9']"
 
 "//a[contains(text(),'Gmail')]"
+
+"//body[@class='aAU']"
