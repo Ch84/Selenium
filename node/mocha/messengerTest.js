@@ -71,6 +71,49 @@ suite(async function(env) {
 
             });
 
+            it('should input the password in the password text field', async function() {
+
+                debug('searching for webelement for password field');
+                let inputPwd = await driver.findElement(By.xpath("//input[@placeholder='Lösenord']"));
+                debug('gave input to pwd field');
+                await inputPwd.sendKeys('Gayathri1991');
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should click the continue button', async function() {
+
+                debug('searching webelement for continue btn');
+                let clickContinueBtn = await driver.findElement(By.xpath("//button[@value='1']"));
+                debug('clicked continue btn');
+                await (await clickContinueBtn.click());
+                await driver.sleep(5000);
+                debug('done');
+
+            });
+
+            it('should click a user chat', async function() {
+
+                debug('searching webelement for a user chat');
+                let clickUserChat = await driver.findElement(By.xpath("//span[@class='_1ht6']//span[contains(text(),'Jesus Titts')]"));
+                debug('clicked user chat');
+                await (await clickUserChat.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
+            it('should write a message to a user', async function() {
+                
+                debug('searching for webelement for user');
+                let chatUser = await driver.findElement(By.xpath("//div[@class='_1mf _1mj']"));
+                debug('wrote message to user');
+                await chatUser.sendKeys('Hej');
+                await driver.sleep(2000);
+                debug('done');
+
+            });
 
        });
 
