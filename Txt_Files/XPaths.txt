@@ -42,3 +42,11 @@
 "//input[@placeholder='E-postadress eller telefonnummer']"
 
 "//input[@placeholder='Lösenord']"
+
+"//button[@value='1']"
+
+"//div[@id='row_header_id_user:100003024495464']//div[@class='_6zkb']"
+
+"//span[@class='_1ht6']//span[contains(text(),'Jesus Titts')]"
+
+"//div[@class='_1mf _1mj']"

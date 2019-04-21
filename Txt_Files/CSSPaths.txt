@@ -9,3 +9,4 @@ body.sectionDocumentation:nth-child(2) div.document:nth-child(3) div.documentwra
 
 body.logged-in.env-production.page-profile.mine.intent-mouse:nth-child(4) div.position-relative.js-header-wrapper:nth-child(1) header.Header-old.f5 div.d-flex.flex-justify-between.px-3 div.HeaderMenu.d-flex.flex-justify-between.flex-auto div.d-flex:nth-child(2) ul.user-nav.d-flex.flex-items-center.list-style-none li.dropdown:nth-child(3) details.details-overlay.details-reset.d-flex.pl-2.flex-items-center summary.HeaderNavlink.name > span.dropdown-caret
 
+body.chrome.webkit.win.x1.Locale_sv_SE._z4_.__6g:nth-child(4) div._2sdm:nth-child(1) div._li div._4sp8 div._1t2u span._mh6._wsc div._20bp div._4_j4 div._4rv3:nth-child(1) div._5irm._1_73 div._kmc._2swd.navigationFocus div._3-8x._3oh- div._5rp7._5rp8 div._5rpb div.notranslate._5rpu div:nth-child(1) div:nth-child(1) > div._1mf._1mj
