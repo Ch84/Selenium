@@ -4,6 +4,7 @@
   "description": "Selenium Webdriver Test",
   "main": "index.js",
   "devDependencies": {
+    "firefox-launch": "latest",
     "chromedriver": "latest",
     "cross-env": "latest",
     "debug": "latest",

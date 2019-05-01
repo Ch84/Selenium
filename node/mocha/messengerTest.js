@@ -96,7 +96,7 @@ suite(async function(env) {
             it('should click a user chat', async function() {
 
                 debug('searching webelement for a user chat');
-                let clickUserChat = await driver.findElement(By.xpath("//span[@class='_1ht6']//span[contains(text(),'Jesus Titts')]"));
+                let clickUserChat = await driver.findElement(By.xpath("//div[@id='row_header_id_thread:2045379245517887']"));
                 debug('clicked user chat');
                 await (await clickUserChat.click());
                 await driver.sleep(2000);
@@ -107,9 +107,11 @@ suite(async function(env) {
             it('should write a message to a user', async function() {
                 
                 debug('searching for webelement for user');
-                let chatUser = await driver.findElement(By.xpath("//div[@class='_1mf _1mj']"));
+                let chatField = await driver.findElement(By.xpath("//*[@class='_1mf _1mj']//following :: div[11]"));
+                let chatUser = await driver.findElement(By.xpath("//div[@class='_1ia']/descendant::div[@class='_5rpu' and @role='combobox']"));
                 debug('wrote message to user');
-                await chatUser.sendKeys('Hej');
+                await (await chatField.click());
+                await chatUser.sendKeys("Hej" + Key.ENTER);
                 await driver.sleep(2000);
                 debug('done');
 
