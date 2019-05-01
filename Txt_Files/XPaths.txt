@@ -47,6 +47,6 @@
 
 "//div[@id='row_header_id_user:100003024495464']//div[@class='_6zkb']"
 
-"//span[@class='_1ht6']//span[contains(text(),'Jesus Titts')]"
+"//*[@class='_1mf _1mj']//following :: div[11]"
 
-"//div[@class='_1mf _1mj']"
+"//div[@id='row_header_id_thread:2045379245517887']"
