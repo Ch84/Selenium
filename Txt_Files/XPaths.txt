@@ -49,4 +49,6 @@
 
 "//*[@class='_1mf _1mj']//following :: div[11]"
 
+"//div[@class='_1ia']/descendant::div[@class='_5rpu' and @role='combobox']"
+
 "//div[@id='row_header_id_thread:2045379245517887']"
