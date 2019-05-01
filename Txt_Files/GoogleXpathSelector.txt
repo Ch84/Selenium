@@ -41,3 +41,13 @@ Verktyg button
 "//a[contains(text(),'Gmail')]"
 
 "//a[@title='Skickat']"
+
+"//a[contains(text(),'Bilder')]"
+
+"//div[contains(text(),'Storlek')]"
+
+"//a[contains(text(),'Stor')]"
+
+"//div[contains(text(),'Fler verktyg')]"
+
+"//a[contains(text(),'Visa storlekar')]"
