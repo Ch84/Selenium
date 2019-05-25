@@ -51,3 +51,7 @@ Verktyg button
 "//div[contains(text(),'Fler verktyg')]"
 
 "//a[contains(text(),'Visa storlekar')]"
+
+"//div[contains(text(),'Typ av bild')]"
+
+"//a[contains(text(),'Linjeteckning')]"
