@@ -1,0 +1,206 @@
+package com.kms.functions
+
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
+import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.checkpoint.Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.testcase.TestCase
+import com.kms.katalon.core.testdata.TestData
+import com.kms.katalon.core.testobject.TestObject
+import com.kms.katalon.core.webui.driver.DriverFactory
+import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.webui.common.WebUiCommonHelper
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.WebElement
+import org.openqa.selenium.support.Color;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import internal.GlobalVariable
+
+public class CustomFunctions {
+
+	@Keyword
+
+	def deleteText(TestObject to) {
+
+		WebElement element = WebUiBuiltInKeywords.findWebElement(to);
+		element.sendKeys(Keys.chord(Keys.CONTROL, 'a'))
+		element.sendKeys(Keys.chord(Keys.BACK_SPACE))
+	}
+
+	@Keyword
+
+	def getElementColor(TestObject to) {
+
+		WebElement element = WebUiBuiltInKeywords.findWebElement(to);
+		String buttonColor = element.getCssValue("background-color");
+		String hex = Color.fromString(buttonColor).asHex();
+		KeywordUtil.logInfo("Button color is: " + "RGB Value: " + buttonColor + "Hex Value: " + hex)
+	}
+
+	@Keyword
+
+	def getAttributeValueForColor(TestObject to) {
+
+		WebElement element = WebUiBuiltInKeywords.findWebElement(to);
+
+		def txt = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Testobject'), "value")
+
+		if (txt.length() > 0) {
+
+			println("DEBUG txt field value: " + txt)
+		} else {
+
+			throw new com.kms.katalon.core.exception.StepErrorException('Value required')
+		}
+	}
+
+	@Keyword
+
+	def getAttributeValueForSearchData(TestObject to) {
+
+		WebElement element = WebUiBuiltInKeywords.findWebElement(to);
+
+		def txt = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Testobject'), "value")
+
+		if (txt.length() > 0) {
+
+			println("DEBUG txt field value: " + txt)
+		} else {
+
+			throw new com.kms.katalon.core.exception.StepErrorException('Value required')
+		}
+	}
+
+	@Keyword
+
+	def clickElement(TestObject to) {
+
+		try {
+
+			WebElement element = WebUiBuiltInKeywords.findWebElement(to);
+			KeywordUtil.markPassed("Trying to click element")
+			element.click()
+
+			if(element == true) {
+
+				KeywordUtil.markFailed("Element was not clicked!")
+			} else {
+
+				KeywordUtil.markPassed("Element was clicked!")
+			}
+		} catch (Exception e) {
+
+			KeywordUtil.logInfo("Retrying to click element")
+			WebElement element = WebUiBuiltInKeywords.findWebElement(to);
+			element.click()
+			KeywordUtil.markPassed("Element was clicked!")
+		}
+	}
+
+	@Keyword
+
+	def clickUsingJS(TestObject to) {
+
+		boolean result = false;
+
+		int attempts = 0;
+
+		while (attempts < 2) {
+
+			try {
+
+				WebDriver driver = DriverFactory.getWebDriver()
+				WebElement element = WebUiCommonHelper.findWebElement(to, 2)
+				JavascriptExecutor executor = ((driver) as JavascriptExecutor)
+				executor.executeScript('arguments[0].click()', element)
+
+				String attributeValue = element.getAttribute("innerHTML")
+				KeywordUtil.markPassed("The element clicked is: " + attributeValue)
+
+				result = true;
+				break;
+			} catch (Exception e) {
+			}
+
+			attempts++;
+		}
+
+		return result;
+	}
+
+	public static void main(String[] args) {
+	}
+
+	@Keyword
+
+	public static chooseButtonAndClick() {
+
+		if(WebUiBuiltInKeywords.verifyElementPresent(findTestObject('Path/Your TestObject'), 2, FailureHandling.OPTIONAL)) {
+
+			WebUiBuiltInKeywords.click(findTestObject('Path/Your TestObject'))
+
+			String attributeValue = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Your TestObject'), 'innerHTML')
+
+			KeywordUtil.logInfo("Clicked button " + attributeValue)
+		} else if (WebUiBuiltInKeywords.verifyElementPresent(findTestObject('Path/Your TestObject'), 2, FailureHandling.OPTIONAL)) {
+
+			WebUiBuiltInKeywords.click(findTestObject('Path/Your TestObject'))
+
+			String attributeValue = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Your TestObject'), 'innerHTML')
+
+			KeywordUtil.logInfo("Clicked button " + attributeValue)
+		} else if (WebUiBuiltInKeywords.verifyElementPresent(findTestObject('Path/Your TestObject'), 2, FailureHandling.OPTIONAL)) {
+
+			WebUiBuiltInKeywords.click(findTestObject('Path/Your TestObject'))
+
+			String attributeValue = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Your TestObject'), 'innerHTML')
+
+			KeywordUtil.logInfo("Clicked button " + attributeValue)
+		} else if (WebUiBuiltInKeywords.verifyElementPresent(findTestObject('Path/Your TestObject'), 2, FailureHandling.OPTIONAL)) {
+
+			WebUiBuiltInKeywords.click(findTestObject('Path/Your TestObject'))
+
+			String attributeValue = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Your TestObject'), 'innerHTML')
+
+			KeywordUtil.logInfo("Clicked button: " + attributeValue)
+		} else if (WebUiBuiltInKeywords.verifyElementPresent(findTestObject(Path/Your TestObject'), 2, FailureHandling.OPTIONAL)) {
+
+			WebUiBuiltInKeywords.click(findTestObject(Path/Your TestObject'))
+
+			String attributeValue = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Your TestObject'), 'innerHTML')
+
+			KeywordUtil.logInfo("Clicked button: " + attributeValue)
+		} else if (WebUiBuiltInKeywords.verifyElementPresent(findTestObject('Path/Your TestObject'), 2, FailureHandling.OPTIONAL)) {
+
+			WebUiBuiltInKeywords.click(findTestObject('Path/Your TestObject'))
+
+			String attributeValue = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Your TestObject'), 'innerHTML')
+
+			KeywordUtil.logInfo("Clicked button: " + attributeValue)
+		} else if(WebUiBuiltInKeywords.verifyElementPresent(findTestObject('Path/Your TestObject'), 2, FailureHandling.OPTIONAL)) {
+
+			WebUiBuiltInKeywords.click(findTestObject('Path/Your TestObject'))
+
+			String attributeValue = WebUiBuiltInKeywords.getAttribute(findTestObject('Path/Your TestObject'), 'innerHTML')
+
+			KeywordUtil.logInfo("Clicked button: " + attributeValue)
+		} else  {
+
+			KeywordUtil.markPassed("None of the buttons was clicked")
+		}
+	}
+}
+
+
+
+

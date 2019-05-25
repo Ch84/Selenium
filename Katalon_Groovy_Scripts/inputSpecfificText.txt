@@ -1,0 +1,69 @@
+package com.kms.input
+
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
+import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.checkpoint.Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.testcase.TestCase
+import com.kms.katalon.core.testdata.TestData
+import com.kms.katalon.core.testobject.TestObject
+import com.kms.katalon.core.webui.common.WebUiCommonHelper
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+import internal.GlobalVariable
+import org.openqa.selenium.WebElement
+import org.openqa.selenium.Keys as Keys
+
+public class InputSpecificText {
+
+	@Keyword
+
+	def copyText(TestObject to) {
+
+		WebElement element = WebUI.findWebElement(to);
+
+		element.sendKeys(Keys.chord(Keys.CONTROL, 'a'))
+		element.sendKeys(Keys.chord(Keys.CONTROL, 'c'))
+	}
+
+	@Keyword
+
+	def pasteText(TestObject to) {
+
+		WebElement element = WebUI.findWebElement(to);
+
+		element.sendKeys(Keys.chord(Keys.CONTROL, 'v'))
+	}
+}
+
+public static void main(String[] args) {
+	}
+
+	@Keyword
+
+	public static copyDisabledElementText() {
+
+		//To enable medical form text box in questionaire form in admin2
+
+		WebDriver driver = DriverFactory.getWebDriver()
+
+		String toEnable = "document.getElementsByName('issueName')[0].removeAttribute('disabled');";
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript(toEnable);
+
+		WebElement element = WebUiCommonHelper.findWebElement(findTestObject('Path/Your TestObject'), 2)
+
+		element.sendKeys(Keys.chord(Keys.CONTROL, 'a'))
+		element.sendKeys(Keys.chord(Keys.CONTROL, 'c'))
+	}
+}
+
