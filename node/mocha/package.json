@@ -6,13 +6,15 @@
   "devDependencies": {
     "firefox-launch": "latest",
     "chromedriver": "latest",
+    "ie64driver": "latest",
+    "edgedriver": "latest",
     "cross-env": "latest",
     "debug": "latest",
     "mocha": "latest",
     "selenium-webdriver": "latest"
   },
   "scripts": {
-    "test": "cross-env SELENIUM_BROWSER=chrome DEBUG=* mocha typeOfPicture.js --timeout 60000"
+    "test": "cross-env SELENIUM_BROWSER=firefox DEBUG=* mocha typeOfImageFace.js --timeout 60000"
   },
   "author": "Christian Hall <https://github.com/Ch84>",
   "license": "ISC"

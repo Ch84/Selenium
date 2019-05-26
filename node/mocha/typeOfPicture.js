@@ -11,7 +11,7 @@ suite(function(env) {
     /* Set up the describe scenario within an async function and explain what
        the test scenario is */
 
-       describe('Google Test Scenario - Filter function', async function() {
+       describe('Google Test Scenario - Filter function line drawing', async function() {
 
             // Create the variable driver and declare it
 
