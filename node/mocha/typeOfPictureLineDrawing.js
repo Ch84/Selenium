@@ -64,7 +64,8 @@ suite(function(env) {
                 debug('searching for the element for text search field');
                 let txtSearchField = driver.findElement(By.name('q'));
                 debug('typing Hand in text search field');
-                await txtSearchField.sendKeys('Hand');
+                await txtSearchField.sendKeys('Hand', Key.ENTER);
+                await driver.wait(until.titleIs('Hand - Sök på Google'), 1000);
                 await driver.sleep(2000);
                 debug('done');
 
@@ -75,29 +76,19 @@ suite(function(env) {
                 debug('searching for element for images');
                 let clickImgTab = driver.findElement(By.xpath("//a[contains(text(),'Bilder')]"));
                 debug('clicking on Images tab');
+                await driver.wait(until.elementLocated(By.xpath("//a[contains(text(),'Bilder')]")), 1000);
                 await (await clickImgTab.click());
                 await driver.sleep(2000);
                 debug('done');
 
             });
 
-            it('should type Hand again in the image search field and press enter', async function() {
-
-                debug('searching for element for image search field');
-                let imgSearchField = driver.findElement(By.name('q'));
-                debug('typing Hand and pressing enter key');
-                await imgSearchField.sendKeys('Hand');
-                await imgSearchField.sendKeys(Key.ENTER);
-                await driver.sleep(2000);
-                debug('done');
-
-            });
-
-            it('should press the tools button', async function() {
+            it('should click on the button for tools', async function() {
 
                 debug('searching for element for tools btn');
-                let clickToolsBtn = driver.findElement(By.xpath("//a[@id='hdtb-tls']"));
-                debug('clicking tools btn');
+                let clickToolsBtn = await driver.findElement(By.xpath("//a[@id='hdtb-tls']"));
+                debug('clicking on the tools btn');
+                await driver.wait(until.elementLocated(By.xpath("//a[@id='hdtb-tls']")), 1000);
                 await (await clickToolsBtn.click());
                 await driver.sleep(2000);
                 debug('done');
@@ -106,24 +97,26 @@ suite(function(env) {
 
             it('should click on the filter function type of image', async function() {
 
-                debug('searching for element for type of img filter');
-                let clickTypeOfImg = driver.findElement(By.xpath("//div[contains(text(),'Typ av bild')]"));
-                debug('clicking on img filter btn');
+                debug('searching for element for type of img');
+                let clickTypeOfImg = await driver.findElement(By.xpath("//div[contains(text(),'Typ av bild')]"));
+                debug('clicking on type of img');
+                await driver.wait(until.elementLocated(By.xpath("//div[contains(text(),'Typ av bild')]")), 1000);
                 await (await clickTypeOfImg.click());
                 await driver.sleep(2000);
                 debug('done');
 
             });
 
-            it('should click on line drawing', async function() {
+            it('should choose the option for line drawing', async function() {
 
                 debug('searching for element for line drawing');
-                let clickLineDrawing = driver.findElement(By.xpath("//a[contains(text(),'Linjeteckning')]"));
+                let chooseLineDrawing = await driver.findElement(By.xpath("//a[contains(text(),'Linjeteckning')]"));
                 debug('clicking on line drawing');
-                await (await clickLineDrawing.click());
+                await driver.wait(until.elementLocated(By.xpath("//a[contains(text(),'Linjeteckning')]")), 1000);
+                await (await chooseLineDrawing.click());
                 await driver.sleep(2000);
                 debug('done');
-                
+
             });
 
        });
