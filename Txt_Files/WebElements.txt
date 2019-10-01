@@ -1,1 +1,7 @@
 <div class="_1p1v" id="placeholder-790gk" style="white-space: pre-wrap;">Skriv ett meddelande, @name ...</div>
+
+Facebook
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+<div role="alert" class="_4rbf _53ij" style="top: 0px;">E-postadressen eller telefonnumret som du har angett matchar inget konto. <a href="/r.php">Registrera dig för ett konto.</a></div>
