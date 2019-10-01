@@ -83,6 +83,7 @@ suite(async function(env) {
                 debug('gave input to user name field');
                 await inputEmail.sendKeys('ch7751@gmail.com');
                 await driver.sleep(2000);
+                debug('done')
 
             });
 
