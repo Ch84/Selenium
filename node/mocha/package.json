@@ -14,7 +14,7 @@
     "selenium-webdriver": "latest"
   },
   "scripts": {
-    "test": "cross-env SELENIUM_BROWSER=chrome DEBUG=* mocha faceBookLoginTest.js --timeout 60000"
+    "test": "cross-env SELENIUM_BROWSER=chrome DEBUG=* mocha googleTestVideoFunction.js --timeout 60000"
   },
   "author": "Christian Hall <https://github.com/Ch84>",
   "license": "ISC"
