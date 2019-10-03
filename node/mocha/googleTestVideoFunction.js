@@ -74,6 +74,17 @@ suite(async function(env) {
 
             });
 
+            it('should click on a video link', async function() {
+
+                debug('searching for web element for video link');
+                let clickVideoLink = await driver.findElement(By.className("LC20lb"));
+                debug('clicking on video link');
+                await (await clickVideoLink.click());
+                await driver.sleep(2000);
+                debug('done');
+
+            });
+
     });
 
 
