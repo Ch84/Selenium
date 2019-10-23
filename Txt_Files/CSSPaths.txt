@@ -12,3 +12,9 @@ body.logged-in.env-production.page-profile.mine.intent-mouse:nth-child(4) div.po
 body.chrome.webkit.win.x1.Locale_sv_SE._z4_.__6g:nth-child(4) div._2sdm:nth-child(1) div._li div._4sp8 div._1t2u span._mh6._wsc div._20bp div._4_j4 div._4rv3:nth-child(1) div._5irm._1_73 div._kmc._2swd.navigationFocus div._3-8x._3oh- div._5rp7._5rp8 div._5rpb div.notranslate._5rpu div:nth-child(1) div:nth-child(1) > div._1mf._1mj
 
 body.chrome.webkit.win.x1.Locale_sv_SE._z4_.__6g:nth-child(4) div._2sdm:nth-child(1) div._li div._4sp8 div._1t2u._7sli span._mh6._wsc div._20bp div._4_j4 div._4rv3:nth-child(1) div._5irm div._kmc.navigationFocus div._3-8x._3oh- div._5rp7._5rp8 div._5rpb div.notranslate._5rpu div:nth-child(1) div:nth-child(1) div._1mf._1mj span:nth-child(1) > br:nth-child(1)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Google
+
+body.srp.tbo.vasq:nth-child(5) div:nth-child(10) div:nth-child(1) div.cF4V5c > a.f9UGee.AchQod:nth-child(5)

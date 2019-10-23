@@ -74,3 +74,16 @@ Google
 "//input[@name='q']"
 
 "//a[contains(text(),'Videor')]"
+
+"//input[@id='xX4UFf']"
+
+"//input[@id='CwYCWc']"
+
+"//input[@id='mSoczb']"
+
+"//input[@id='t2dX1c']"
+
+"//input[@id='LK5akc']"
+
+"//input[@name='as_nhi']"
+
