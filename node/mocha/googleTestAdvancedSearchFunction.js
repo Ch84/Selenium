@@ -52,6 +52,39 @@ suite(async function(env) {
 
                 });
 
+                it('should press the search button', async function() {
+
+                    debug('searcing for web element for search btn');
+                    let clickSearchBtn = await driver.findElement(By.name("btnK"));
+                    debug('clicking search btn');
+                    await (await clickSearchBtn.click());
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should press the settings filter function', async function() {
+
+                    debug('searching for web element for advanced settings');
+                    let clickAdvancedSetting = await driver.findElement(By.xpath("//a[@id='abar_button_opt']"));
+                    debug('clicking advanced settings');
+                    await (await clickAdvancedSetting.click());
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should click on the advanced settings function', async function() {
+
+                    debug('searching for web element for advanced settings');
+                    let clickAdvancedSettings = await driver.findElement(By.linkText("Avancerad sökning"));
+                    debug('clicking advanced settings');
+                    await (await clickAdvancedSettings.click());
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
         });
 
 
