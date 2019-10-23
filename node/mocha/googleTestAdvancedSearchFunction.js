@@ -90,7 +90,67 @@ suite(async function(env) {
                     debug('searching for the field for all following words');
                     let deleteFollowingWordsField = await driver.findElement(By.xpath("//input[@id='xX4UFf']"));
                     debug('deleting input webdriver');
+                    await deleteFollowingWordsField.sendKeys(Key.CONTROL, 'a');
                     await deleteFollowingWordsField.sendKeys(Key.DELETE);
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should type webdriver in the field for all following words', async function() {
+
+                    debug('searching for the field for all following words');
+                    let inputFollowingWordsField = await driver.findElement(By.xpath("//input[@id='xX4UFf']"));
+                    debug('giving input webdriver');
+                    await inputFollowingWordsField.sendKeys("webdriver");
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should type web in the field for exact word or phrase', async function() {
+
+                    debug('searching for the field for exact word or phrase');
+                    let inputExactWordOrPhrase = await driver.findElement(By.xpath("//input[@id='CwYCWc']"));
+                    debug('giving input webdriver');
+                    await inputExactWordOrPhrase.sendKeys("webdriver");
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should type in the field for something of the following word', async function() {
+
+                    debug('searching for field for input something of the following word');
+                    let inputSomeWord = await driver.findElement(By.xpath("//input[@id='mSoczb']"));
+                    debug('giving input web');
+                    await inputSomeWord.sendKeys("web");
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should type in the field for nothing of the following words', async function() {
+
+                    debug('searching for field for input nothing of the following words');
+                    let inputNothingOfTheFollowingWords = await driver.findElement(By.xpath("//input[@id='t2dX1c']"));
+                    debug('giving input test');
+                    await inputNothingOfTheFollowingWords.sendKeys("test");
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should type a number between 0 - 9 in the number fields', async function() {
+
+                    debug('searching for number fields');
+                    let numberField0 = await driver.findElement(By.xpath("//input[@id='LK5akc']"));
+                    let numberField1 = await driver.findElement(By.xpath("//input[@name='as_nhi']"));
+                    debug('giving input 0 - 9');
+                    await numberField0.sendKeys("0");
+                    await numberField1.sendKeys("9");
+                    await driver.sleep(2000);
+                    debug('done');
 
                 });
 
