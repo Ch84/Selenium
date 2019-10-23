@@ -1,0 +1,4 @@
+
+Google
+
+<a href="/advanced_search?q=test&amp;sxsrf=ACYBGNTfeb1tpVCOqVQyT73xgXcCB3NjUg:1571861671428&amp;hl=sv" class="f9UGee" jsaction="mouseover:sbHm2b" role="menuitem" tabindex="-1" data-ved="0ahUKEwiQz76EmbPlAhXNcJoKHU8bDA8Qo_oBCCA" xpath="1">Avancerad sökning</a>

@@ -85,6 +85,15 @@ suite(async function(env) {
 
                 });
 
+                it('should delete webdriver in the field for all following words', async function() {
+
+                    debug('searching for the field for all following words');
+                    let deleteFollowingWordsField = await driver.findElement(By.xpath("//input[@id='xX4UFf']"));
+                    debug('deleting input webdriver');
+                    await deleteFollowingWordsField.sendKeys(Key.DELETE);
+
+                });
+
         });
 
 
