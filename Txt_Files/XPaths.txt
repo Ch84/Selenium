@@ -98,3 +98,11 @@ Google
 "//div[@id='as_qdr_button']"
 
 "//div[contains(text(),'senaste året')]"
+
+"//div[@id='as_occt_button']"
+
+"//div[contains(text(),'i länkar till sidan')]"
+
+"//div[@id='as_filetype_button']"
+
+"//div[contains(text(),'Adobe Acrobat PDF (. pdf)')]"
