@@ -193,6 +193,32 @@ suite(async function(env) {
 
                 });
 
+                it('should choose a term in the menu for terms to show', async function() {
+
+                    debug('searching for webelement for terms menu');
+                    let chooseTerm = await driver.findElement(By.xpath("//div[@id='as_occt_button']"));
+                    let choosTermLinksToPage = await driver.findElement(By.xpath("//div[contains(text(),'i länkar till sidan')]"));
+                    debug('choosing a term');
+                    await (await chooseTerm.click());
+                    await (await choosTermLinksToPage.click());
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should choose format in the filetype menu', async function() {
+
+                    debug('searching for webelement for filetype menu');
+                    let chooseFileType = await driver.findElement(By.xpath("//div[@id='as_filetype_button']"));
+                    let chooseFileFormat = await driver.findElement(By.xpath("//div[contains(text(),'Adobe Acrobat PDF (. pdf)')]"));
+                    debug('choosing filetype format');
+                    await (await chooseFileType.click());
+                    await (await chooseFileFormat.click());
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
         });
 
 });
