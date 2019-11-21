@@ -87,3 +87,14 @@ Google
 
 "//input[@name='as_nhi']"
 
+"//div[@id='lr_button']"
+
+"//div[contains(text(),'koreanska')]"
+
+"//div[@id='cr_button']"
+
+"//div[contains(text(),'Sri Lanka')]"
+
+"//div[@id='as_qdr_button']"
+
+"//div[contains(text(),'senaste året')]"
