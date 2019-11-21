@@ -154,8 +154,45 @@ suite(async function(env) {
 
                 });
 
+                it('should choose a language in the language menu', async function() {
+
+                    debug('searching for webelement for lang menu');
+                    let chooseLang = await driver.findElement(By.xpath("//div[@id='lr_button']"));
+                    let chooseKoreanLang = await driver.findElement(By.xpath("//div[contains(text(),'koreanska')]"));
+                    debug('choosing language');
+                    await (await chooseLang.click());
+                    await (await chooseKoreanLang.click());
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should choose a region in the region menu', async function() {
+
+                    debug('searching for webelement for region');
+                    let chooseRegion = await driver.findElement(By.xpath("//div[@id='cr_button']"));
+                    let chooseRegionSriLanka = await driver.findElement(By.xpath("//div[contains(text(),'Sri Lanka')]"));
+                    debug('choosing region');
+                    await (await chooseRegion.click());
+                    await (await chooseRegionSriLanka.click());
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
+                it('should choose when the information last was updated', async function() {
+
+                    debug('searching for webelement for info update');
+                    let chooseLatestUpdate = await driver.findElement(By.xpath("//div[@id='as_qdr_button']"));
+                    let chooseLastYear = await driver.findElement(By.xpath("//div[contains(text(),'senaste året')]"));
+                    debug('choosing latest info update');
+                    await (await chooseLatestUpdate.click());
+                    await (await chooseLastYear.click());
+                    await driver.sleep(2000);
+                    debug('done');
+
+                });
+
         });
-
-
 
 });
