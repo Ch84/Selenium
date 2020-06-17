@@ -52,6 +52,39 @@ suite(async function(env) {
             
         });
 
+        it('should click on mobilt bank id button', async function() {
+
+            debug('searching for web element');
+            let mobiltBankId = await driver.findElement(By.xpath("//a[@class='btn btn-primary btn-block login-mobil btn-lg']"));
+            debug('clicking on mobilt bank id button');
+            await (await mobiltBankId.click());
+            await driver.sleep(2000);
+            debug('done');
+
+        });
+
+        it('should type ssn in the ssn input field', async function() {
+
+            debug('searching for web element');
+            let inputSSN = await driver.findElement(By.xpath("//input[@id='serial_number']"));
+            debug('giving ssn input');
+            await inputSSN.sendKeys('198410300134');
+            await driver.sleep(2000);
+            debug('done');
+
+        }); 
+
+        it('should click the log in button', async function() {
+
+            debug('searching for web element');
+            let clickLoginBtn = await driver.findElement(By.xpath("//input[@id='loginButton']"));
+            debug('clicking login button');
+            await (await clickLoginBtn.click());
+            driver.sleep(2000);
+            debug('done');
+
+        });
+
     });
 
 });
