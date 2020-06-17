@@ -106,3 +106,20 @@ Google
 "//div[@id='as_filetype_button']"
 
 "//div[contains(text(),'Adobe Acrobat PDF (. pdf)')]"
+
+-------------------------------------------------------------------------------------------------------------------------------
+Arbetsförmedlingen
+
+"//a[@class='functions-nav__link js-start-login']"
+
+
+
+
+
+
+
+
+
+
+
+
