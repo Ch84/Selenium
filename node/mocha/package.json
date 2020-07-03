@@ -14,7 +14,7 @@
     "selenium-webdriver": "latest"
   },
   "scripts": {
-    "test": "cross-env SELENIUM_BROWSER=chrome DEBUG=* mocha arbetsformedlingenLoginTest.js --timeout 60000"
+    "test": "cross-env SELENIUM_BROWSER=chrome DEBUG=* mocha googleAssertionTest.js --timeout 60000"
   },
   "author": "Christian Hall <https://github.com/Ch84>",
   "license": "ISC"

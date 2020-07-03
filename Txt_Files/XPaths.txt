@@ -107,12 +107,18 @@ Google
 
 "//div[contains(text(),'Adobe Acrobat PDF (. pdf)')]"
 
+"//div[@class='FPdoLc tfB0Bf']//input[@name='btnK']"
+
 -------------------------------------------------------------------------------------------------------------------------------
 Arbetsförmedlingen
 
 "//a[@class='functions-nav__link js-start-login']"
 
 "//a[@class='btn btn-primary btn-block login-mobil btn-lg']"
+
+"//input[@id='serial_number']"
+
+"//input[@id='loginButton']"
 
 
 
